@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <declare-styleable name="PassWordEdittext">
+    // 密码的个数
+    <attr format="dimension" name="passWordNumber" />
+    // 密码圆点的颜色
+    <attr format="color" name="passWordColor" />
+    // 密码圆点大小
+    <attr format="dimension" name="passWordPointSize" />
+    // 背景圆角的大小
+    <attr format="dimension" name="bgRadius" />
+    // 背景边框大小
+    <attr format="dimension" name="bgRectSize" />
+    // 背景边框颜色
+    <attr format="color" name="bgRectColor" />
+    // 背景边框颜色
+    <attr format="color" name="bgXColor" />
+    // 分割线的颜色
+    <attr format="color" name="dividerColor" />
+    // 分割线的大小
+    <attr format="dimension" name="dividerSize" />
+  </declare-styleable>
+
+  <declare-styleable name="circlePointPasswordText">
+    //圆点大小
+    <attr format="dimension" name="circleSize" />
+    //圆点默认颜色
+    <attr format="color" name="circlrBg" />
+    //圆点个数
+    <attr format="dimension" name="circleCount" />
+    //输入密码圆点颜色
+    <attr format="color" name="circleColor" />
+  </declare-styleable>
+
+  <declare-styleable name="QMUILoadingView">
+
+    <attr format="dimension" name="qmui_loading_view_size" />
+    <attr format="color" name="android_color" />
+
+
+  </declare-styleable>
+</resources>
