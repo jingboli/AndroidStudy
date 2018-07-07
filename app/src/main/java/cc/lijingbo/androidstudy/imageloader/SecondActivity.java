@@ -21,13 +21,11 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_imageloader_second);
         iv = (BigImageView) findViewById(R.id.iv);
-
-        iv.post(new Runnable() {
-            @Override
-            public void run() {
-//                loadBigImage(iv);
-            }
-        });
+        try {
+            iv.setBitmapInputStream(getResources().getAssets().open("bigpicture.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }

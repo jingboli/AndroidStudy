@@ -3,21 +3,20 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context="cc.lijingbo.paypasswordview.Main2Activity">
+  android:layout_height="match_parent">
 
 
-  <cc.lijingbo.paypasswordview.widget.CirclePointPasswordText
+  <cc.lijingbo.androidstudy.paypassword.widget.CirclePointPasswordText
     android:id="@+id/circlePoint"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="50dp"
     android:layout_marginTop="100dp" />
-  <cc.lijingbo.paypasswordview.widget.CustomKeyBoard
+  <cc.lijingbo.androidstudy.paypassword.widget.CustomKeyBoard
     android:id="@+id/keyboard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true">
 
-  </cc.lijingbo.paypasswordview.widget.CustomKeyBoard>
+  </cc.lijingbo.androidstudy.paypassword.widget.CustomKeyBoard>
 </RelativeLayout>

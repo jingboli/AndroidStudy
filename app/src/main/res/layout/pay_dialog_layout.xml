@@ -37,7 +37,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="30dp">
-    <cc.lijingbo.paypasswordview.widget.PassWordEdittext
+    <cc.lijingbo.androidstudy.paypassword.widget.PassWordEdittext
       android:id="@+id/password"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
 
   </RelativeLayout>
 
-  <cc.lijingbo.paypasswordview.widget.CustomKeyBoard
+  <cc.lijingbo.androidstudy.paypassword.widget.CustomKeyBoard
     android:id="@+id/customkeyboard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />

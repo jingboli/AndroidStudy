@@ -44,15 +44,12 @@ public class BigImageView extends View {
 
     public BigImageView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
     }
 
-    private void init() {
+    public void setBitmapInputStream(InputStream inputStream) {
         mRect = new Rect();
         paint = new Paint();
         try {
-            InputStream inputStream = getResources().getAssets().open("bigpicture.jpg");
-
             options = new Options();
             options.inJustDecodeBounds = true;
             BitmapFactory.decodeStream(inputStream, null, options);
@@ -64,10 +61,13 @@ public class BigImageView extends View {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        requestLayout();
     }
+
+
     float downX = 0;
     float downY = 0;
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
@@ -117,16 +117,21 @@ public class BigImageView extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        mRect.left = 0;
-        mRect.right = getMeasuredWidth() + mRect.left;
-        mRect.top = 0;
-        mRect.bottom = getMeasuredHeight() + mRect.top;
+        if (mRect != null) {
+            mRect.left = 0;
+            mRect.right = getMeasuredWidth() + mRect.left;
+            mRect.top = 0;
+            mRect.bottom = getMeasuredHeight() + mRect.top;
+        }
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Bitmap bitmap = bitmapRegionDecoder.decodeRegion(mRect, options);
-        canvas.drawBitmap(bitmap, 0, 0, paint);
+        if (bitmapRegionDecoder != null) {
+            Bitmap bitmap = bitmapRegionDecoder.decodeRegion(mRect, options);
+            canvas.drawBitmap(bitmap, 0, 0, paint);
+        }
+
     }
 }

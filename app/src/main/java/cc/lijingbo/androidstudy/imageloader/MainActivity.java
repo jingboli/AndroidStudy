@@ -9,7 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.Toast;
 import cc.lijingbo.androidstudy.R;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,10 +33,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void loadImage(ImageView view) {
+    private void loadImage(ImageView view) throws IOException {
         BitmapFactory.Options options = new Options();
         options.inJustDecodeBounds = true;
-        BitmapFactory.decodeResource(getResources(), R.drawable.bigpicture, options);
+        InputStream is = getResources().getAssets().open("bigpicture.jpg");
+        BitmapFactory.decodeStream(is, null, options);
         int outHeight = options.outHeight;
         int outWidth = options.outWidth;
         int inSampleSize = 1;
@@ -48,11 +52,15 @@ public class MainActivity extends AppCompatActivity {
         }
         options.inSampleSize = inSampleSize;
         options.inJustDecodeBounds = false;
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bigpicture, options);
+        Bitmap bitmap = BitmapFactory.decodeStream(is, null, options);
         view.setImageBitmap(bitmap);
     }
 
     public void loadBigImage(View view) {
-        loadImage(iv);
+        try {
+            loadImage(iv);
+        } catch (IOException e) {
+            Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+        }
     }
 }

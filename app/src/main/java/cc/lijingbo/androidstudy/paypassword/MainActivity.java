@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pay_main);
         mHandler = new MyHandler(this);
 
-        TestMain<String,String> testMain = new TestMain<>(111);
+        TestMain<String, String> testMain = new TestMain<>(111);
     }
 
     @Override
@@ -49,15 +49,16 @@ public class MainActivity extends AppCompatActivity {
                     Thread.sleep(15000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }finally {
+                } finally {
                     Message message = Message.obtain();
                     message.what = WHAT;
-                    new Handler().sendMessage(message);
+                    mHandler.sendMessage(message);
                 }
             }
         }).start();
 
     }
+
 
     static class MyHandler extends Handler {
 
@@ -82,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
 
     public void popupDialog(View view) {
         Builder builder = new Builder(MainActivity.this).setView(R.layout.pay_dialog_layout).fromBottom().fullWidth()
