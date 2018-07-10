@@ -1,4 +1,4 @@
-package cc.lijingbo.androidstudy.imageloader;
+package cc.lijingbo.androidstudy.bigimage;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -14,7 +14,7 @@ import cc.lijingbo.androidstudy.R;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class MainActivity extends AppCompatActivity {
+public class ImageLoaderMainActivity extends AppCompatActivity {
 
     ImageView iv;
 
@@ -27,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
         iv.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                Intent intent = new Intent(ImageLoaderMainActivity.this, ImageLoaderSecondActivity.class);
                 startActivity(intent);
             }
         });
+
+
     }
 
     private void loadImage(ImageView view) throws IOException {
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             loadImage(iv);
         } catch (IOException e) {
-            Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(ImageLoaderMainActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 }

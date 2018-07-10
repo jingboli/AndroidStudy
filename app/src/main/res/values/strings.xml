@@ -2,4 +2,6 @@
   <string name="app_name">AndroidStudy</string>
   <string name="input_password_string">请输入支付密码</string>
   <string name="forget_password_string">忘记密码?</string>
+
+  <item name="imageloader_uri" type="id">imageloader_uri</item>;
 </resources>

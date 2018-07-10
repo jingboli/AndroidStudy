@@ -1,4 +1,4 @@
-package cc.lijingbo.androidstudy.imageloader;
+package cc.lijingbo.androidstudy.bigimage;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory.Options;
@@ -8,11 +8,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import cc.lijingbo.androidstudy.R;
-import cc.lijingbo.androidstudy.imageloader.view.BigImageView;
+import cc.lijingbo.androidstudy.bigimage.view.BigImageView;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class SecondActivity extends AppCompatActivity {
+public class ImageLoaderSecondActivity extends AppCompatActivity {
 
     BigImageView iv;
 
