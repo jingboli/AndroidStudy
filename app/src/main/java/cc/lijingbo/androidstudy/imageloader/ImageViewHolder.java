@@ -1,4 +1,4 @@
-package cc.lijingbo.androidstudy.imageloader_ren;
+package cc.lijingbo.androidstudy.imageloader;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

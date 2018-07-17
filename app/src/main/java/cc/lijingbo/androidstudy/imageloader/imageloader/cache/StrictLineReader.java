@@ -1,4 +1,4 @@
-package cc.lijingbo.androidstudy.imageloader.cache;
+package cc.lijingbo.androidstudy.imageloader.imageloader.cache;
 
 /*
  * Copyright (C) 2012 The Android Open Source Project

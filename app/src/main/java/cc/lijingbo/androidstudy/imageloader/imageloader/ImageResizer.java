@@ -1,4 +1,4 @@
-package cc.lijingbo.androidstudy.imageloader;
+package cc.lijingbo.androidstudy.imageloader.imageloader;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;

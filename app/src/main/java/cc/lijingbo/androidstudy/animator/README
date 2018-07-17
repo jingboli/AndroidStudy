@@ -1,0 +1,6 @@
+# 属性动画
+- ValueAnimator
+- ObjectAnimator
+- AnimatorSet
+- TimeInterpolator: 插值器
+- TypeEvaluator: 估值器

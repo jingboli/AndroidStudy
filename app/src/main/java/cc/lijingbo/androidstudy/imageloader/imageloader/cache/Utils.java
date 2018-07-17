@@ -1,4 +1,4 @@
-package cc.lijingbo.androidstudy.imageloader.cache;
+package cc.lijingbo.androidstudy.imageloader.imageloader.cache;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;

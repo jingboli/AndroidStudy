@@ -12,7 +12,7 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
-    <activity android:name=".bigimage.ImageLoaderMainActivity"></activity>
+    <activity android:name=".bigimage.ImageLoaderMainActivity" />
     <activity android:name=".bigimage.ImageLoaderSecondActivity" />
     <activity
       android:name=".paypassword.MainActivity"
@@ -20,16 +20,20 @@
     <activity
       android:name=".paypassword.Main2Activity"
       android:screenOrientation="portrait" />
-    <activity android:name=".imageloader_ren.ImageLoaderMainactivity">
-
+    <activity android:name=".imageloader.imageloader_ren.ImageLoaderMainactivity" />
+    <activity android:name=".imageloader.imageloader.ImageLoaderMainActivity" />
+    <activity android:name=".webview.WebViewActivity" />
+    <activity android:name=".webview.WebViewTestActivity" />
+    <activity android:name=".animation.AnimationMainActivity">
     </activity>
-    <activity android:name=".imageloader.ImageLoaderMainActivity">
+    <activity android:name=".MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:name=".imageloader.ImageLoaderDispatcherActivity"></activity>
   </application>
 
 </manifest>

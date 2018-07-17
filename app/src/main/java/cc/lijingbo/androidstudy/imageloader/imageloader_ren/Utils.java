@@ -1,4 +1,4 @@
-package cc.lijingbo.androidstudy.imageloader_ren;
+package cc.lijingbo.androidstudy.imageloader.imageloader_ren;
 
 import java.io.IOException;
 import java.io.InputStream;

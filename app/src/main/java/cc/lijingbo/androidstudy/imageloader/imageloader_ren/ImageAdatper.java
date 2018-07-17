@@ -1,4 +1,4 @@
-package cc.lijingbo.androidstudy.imageloader_ren;
+package cc.lijingbo.androidstudy.imageloader.imageloader_ren;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import cc.lijingbo.androidstudy.R;
+import cc.lijingbo.androidstudy.imageloader.ImageViewHolder;
 import java.util.List;
 
 /**

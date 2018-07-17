@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cc.lijingbo.androidstudy.imageloader.cache;
+package cc.lijingbo.androidstudy.imageloader.imageloader.cache;
 
 import java.io.BufferedWriter;
 import java.io.Closeable;

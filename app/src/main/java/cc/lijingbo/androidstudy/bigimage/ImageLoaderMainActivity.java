@@ -1,5 +1,6 @@
 package cc.lijingbo.androidstudy.bigimage;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -31,6 +32,8 @@ public class ImageLoaderMainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ObjectAnimator backgroundColor = ObjectAnimator.ofInt(iv, "backgroundColor", 0xffff8080, 0xff8080ff);
 
 
     }

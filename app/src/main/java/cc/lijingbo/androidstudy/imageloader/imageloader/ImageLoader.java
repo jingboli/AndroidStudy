@@ -1,4 +1,4 @@
-package cc.lijingbo.androidstudy.imageloader;
+package cc.lijingbo.androidstudy.imageloader.imageloader;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,7 +11,7 @@ import android.util.LruCache;
 import android.view.View;
 import android.view.View.OnLayoutChangeListener;
 import android.widget.ImageView;
-import cc.lijingbo.androidstudy.imageloader_ren.HttpClient_li;
+import cc.lijingbo.androidstudy.imageloader.HttpClient_li;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.Executor;

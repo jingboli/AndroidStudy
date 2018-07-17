@@ -1,4 +1,4 @@
-package cc.lijingbo.androidstudy.imageloader_ren;
+package cc.lijingbo.androidstudy.imageloader.imageloader_ren;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -17,9 +17,10 @@ import android.view.View;
 import android.view.View.OnLayoutChangeListener;
 import android.widget.ImageView;
 import cc.lijingbo.androidstudy.R;
-import cc.lijingbo.androidstudy.imageloader.cache.DiskLruCache;
-import cc.lijingbo.androidstudy.imageloader.cache.DiskLruCache.Editor;
-import cc.lijingbo.androidstudy.imageloader.cache.DiskLruCache.Snapshot;
+import cc.lijingbo.androidstudy.imageloader.HttpClient_li;
+import cc.lijingbo.androidstudy.imageloader.imageloader.cache.DiskLruCache;
+import cc.lijingbo.androidstudy.imageloader.imageloader.cache.DiskLruCache.Editor;
+import cc.lijingbo.androidstudy.imageloader.imageloader.cache.DiskLruCache.Snapshot;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
