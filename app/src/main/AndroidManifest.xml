@@ -24,8 +24,7 @@
     <activity android:name=".imageloader.imageloader.ImageLoaderMainActivity" />
     <activity android:name=".webview.WebViewActivity" />
     <activity android:name=".webview.WebViewTestActivity" />
-    <activity android:name=".animation.AnimationMainActivity">
-    </activity>
+    <activity android:name=".animation.AnimationMainActivity" />
     <activity android:name=".MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -33,7 +32,11 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name=".imageloader.ImageLoaderDispatcherActivity"></activity>
+    <activity android:name=".imageloader.ImageLoaderDispatcherActivity" />
+    <activity
+      android:name=".AlphaActivity"
+      android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
+    <activity android:name=".ui.WaterMarkActivity"></activity>
   </application>
 
 </manifest>

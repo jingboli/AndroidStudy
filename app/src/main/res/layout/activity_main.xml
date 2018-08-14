@@ -36,12 +36,20 @@
   <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:onClick="imageLoader2" />
+    android:text="dialog"
+    android:onClick="dialogClick" />
 
   <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:onClick="imageLoader1" />
+    android:text="透明activity"
+    android:onClick="alphaActivity" />
 
+
+  <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="水印activity"
+    android:onClick="waterMarkActivity" />
 
 </LinearLayout>
