@@ -22,6 +22,7 @@
       android:screenOrientation="portrait" />
     <activity android:name=".imageloader.imageloader_ren.ImageLoaderMainactivity" />
     <activity android:name=".imageloader.imageloader.ImageLoaderMainActivity" />
+    <activity android:name=".webview.WebViewJavaActivity" />
     <activity android:name=".webview.WebViewActivity" />
     <activity android:name=".webview.WebViewTestActivity" />
     <activity android:name=".animation.AnimationMainActivity" />

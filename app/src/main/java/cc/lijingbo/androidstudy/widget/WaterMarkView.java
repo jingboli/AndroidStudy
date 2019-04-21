@@ -68,7 +68,8 @@ public class WaterMarkView extends View {
             }
 
             int textWidthScreen = (int) mPaint.measureText(mark);
-            String thressStr = "四个字四";
+            // 四个汉字,需要四个汉字的宽度
+            String thressStr = "四四四四";
             int textWidth = (int) mPaint.measureText(thressStr + mark);
             int thressStrWidth = (int) mPaint.measureText(thressStr);
             canvas.rotate(-15);
