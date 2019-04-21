@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg_grey"
+  android:orientation="vertical">
+
+  <RelativeLayout
+    android:id="@+id/address_info_layout"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/bg_white">
+
+    <TextView
+      android:id="@+id/play_card_location_error_tv"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_marginLeft="15dp"
+      android:drawablePadding="7dp"
+      android:drawableRight="@drawable/location_arrow"
+      android:gravity="center"
+      android:text="网络错误"
+      android:textColor="@color/font_black_gray"
+      android:textSize="15sp" />
+
+  </RelativeLayout>
+
+
+  <ImageView
+    android:id="@+id/network_error_img"
+    android:layout_width="100dp"
+    android:layout_height="88dp"
+    android:layout_below="@id/address_info_layout"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="70dp"
+    android:src="@drawable/network_error_icon" />
+
+  <TextView
+    android:id="@+id/error_info_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/network_error_img"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="30dp"
+    android:text="您的网络好像不给力，请稍后再试"
+    android:textColor="@color/font_light_gray"
+    android:textSize="12sp" />
+
+  <Button
+    android:id="@+id/retry_btn"
+    android:layout_width="118dp"
+    android:layout_height="31dp"
+    android:layout_below="@id/error_info_tv"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="30dp"
+    android:background="@drawable/shape_network_error"
+    android:text="重新加载"
+    android:textColor="@color/bg_white"
+    android:textSize="12sp" />
+</RelativeLayout>

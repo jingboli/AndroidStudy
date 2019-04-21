@@ -16,7 +16,6 @@ import android.util.LruCache;
 import android.view.View;
 import android.view.View.OnLayoutChangeListener;
 import android.widget.ImageView;
-import cc.lijingbo.androidstudy.R;
 import cc.lijingbo.androidstudy.imageloader.HttpClient_li;
 import cc.lijingbo.androidstudy.imageloader.imageloader.cache.DiskLruCache;
 import cc.lijingbo.androidstudy.imageloader.imageloader.cache.DiskLruCache.Editor;
@@ -59,7 +58,7 @@ public class ImageLoader {
 
     private static final long KEEP_ALIVE = 10L;
 
-    private static final int TAG_KEY_URI = R.id.imageloader_uri;
+    private static final int TAG_KEY_URI = 0x0012;
 
     private static final long DISK_CACHE_SIZE = 1024 * 1014 * 50;
 

@@ -51,12 +51,12 @@ public class NaviActivity extends AppCompatActivity {
     private void checkBaiduMap(double latitude, double longtitude, String address) {
         if (isInstallApk(this, "com.baidu.BaiduMap")) {// 是否安装了百度地图
             try {
-                Intent intent = Intent.getIntent("intent://map/direction?destination=latlng:"
+                Intent intent = Intent.parseUri("intent://map/direction?destination=latlng:"
                         + latitude + ","
                         + longtitude + "|name:" + address + // 终点
                         "&mode=driving&" + // 导航路线方式
                         "region=" + //
-                        "&src=#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end");
+                        "&src=#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end", Intent.URI_ALLOW_UNSAFE);
                 startActivity(intent); // 启动调用
             } catch (URISyntaxException e) {
                 Log.e("intent", e.getMessage());
@@ -75,10 +75,10 @@ public class NaviActivity extends AppCompatActivity {
     private void checkGaodeMap(double latitude, double longtitude, String address) {
         if (isInstallApk(this, "com.autonavi.minimap")) {// 是否安装了高德地图
             try {
-                Intent intent = Intent.getIntent("androidamap://navi?sourceApplication=&poiname=" + address + "&lat="
+                Intent intent = Intent.parseUri("androidamap://navi?sourceApplication=&poiname=" + address + "&lat="
                         + latitude
                         + "&lon="
-                        + longtitude + "&dev=0");
+                        + longtitude + "&dev=0",Intent.URI_ALLOW_UNSAFE);
                 this.startActivity(intent); // 启动调用
             } catch (URISyntaxException e) {
                 Log.e("intent", e.getMessage());

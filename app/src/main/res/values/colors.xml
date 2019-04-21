@@ -3,4 +3,104 @@
   <color name="colorPrimary">#3F51B5</color>
   <color name="colorPrimaryDark">#303F9F</color>
   <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent2">#64000000</color>
+    <color name="default_textcolor">#646464</color>
+    <color name="background_gray_color">#EFEFF4</color>
+    <color name="gray_min">#FAFAFA</color>
+    <color name="scan_bg">#7f000000</color>
+    <color name="red">#FFC93437</color>
+    <color name="blue">#FF375BF1</color>
+    <color name="blue2">#394BFD</color>
+    <color name="purple">#AD61FB</color>
+    <color name="yellow">#FFF7D23E</color>
+    <color name="bind_card_yellow">#e99e1a</color>
+    <color name="green">#FF34A350</color>
+    <color name="grey">#cecece</color>
+    <color name="bg_common_grey">#eeeeee</color>
+
+    <color name="main_color">#F27473</color>
+    <color name="houyan">#FE664F</color>
+    <color name="first_intput">#F52D12</color>
+    <color name="houyanfen">#FFaa45</color>
+    <color name="golden_cardnickname">#785a4a</color>
+    <color name="trans_golden_cardnickname">#D1C1B9</color>
+    <color name="bill_blue">#71c0f3</color>
+    <color name="text_black">#484848</color>
+    <color name="register_title">#989898</color>
+    <color name="dialog_contact">#999999</color>
+    <color name="dialog_contact_dark">#666666</color>
+    <color name="mine_text_color">#333333</color>
+    <color name="forget_pwd">#fe664f</color>
+    <color name="text_point">#adadad</color>
+    <color name="btn_reminder">#E45B46</color>
+
+    <color name="divide_line">#dddddd</color>
+    <color name="divide_line2">#EBEBEB</color>
+    <color name="orange_shit">#cda45b</color>
+
+    <color name="text_hint_color">#CCCCCC</color>
+    <color name="white">#ffffff</color>
+    <color name="white2">#e3ffffff</color>
+    <color name="black">#000000</color>
+    <color name="lightGray">#c8c8c8</color>
+    <color name="cycle_image_bg">#44222222</color>
+    <color name="text_color">#005fff</color>
+    <color name="lijian_text_color">#6A9FFF</color>
+    <color name="xieyi">#70c0f3</color>
+    <color name="kefu_phone">#38AAFF</color>
+    <color name="bg_dialog">#99000000</color>
+    <color name="red_packet_value">#ccb07e</color>
+    <color name="btn_gray_line">#DADADA</color>
+    <!--add by sixiaobing for 2018.05.10 require-->
+    <color name="gray_dark_color">#666666</color>
+    <color name="back_groud_color">#F7F6F8</color>
+    <color name="gray_middle_color">#999999</color>
+    <color name="black_color">#333333</color>
+    <color name="line_color">#EBEBEB</color>
+    <color name="bg_toast_text">#E6000000</color>
+    <color name="bg_registration_protocol">#7dc8f7</color>
+
+    <color name="bg_choice_tab">#999999</color>
+    <color name="tv_choice_tab">#ffffff</color>
+    <color name="bg_choice_tab_v1">#333333</color>
+
+    <color name="bg_nav">#5488c8</color> <!--导航栏-->
+    <color name="bg_white">#ffffff</color>
+    <color name="bg_livider">#eeeeee</color>
+    <color name="item_divider">#eeeeee</color>
+
+    <color name="bg_grey">#f0f0f0</color>
+
+    <color name="bg_app_red">#ff505d</color>
+    <color name="common_light_gray">#f0f0f0</color>
+
+    <color name="font_black_gray">#333333</color>
+    <color name="font_dark_gray">#666666</color>
+    <color name="font_light_gray">#999999</color>
+    <color name="font_spring_gold">#ffe09c</color>
+    <color name="font_red">#ff505d</color>
+    <color name="font_other_red">#ff5d4b</color>
+    <color name="font_new_red">#FF4B4B</color>
+    <color name="font_red_2">#ff7882</color>
+    <color name="font_white">#ffffff</color>
+    <color name="font_blue">#27acff</color>
+
+    <color name="decoration_color">#e5e5e5</color>
+    <color name="reward_friend_item_bg">#fafafa</color>
+    <color name="bg_gray_f8">#f8f8f8</color>
+    <color name="layer_gray">#ff333333</color>
+
+
+    <color name="bg_card_guide_item">#f5f5f5</color>
+
+    <color name="green_dark">#298409</color>
+
+
+    <color name="common_bg">#f5f5f5</color>
+    <color name="common_bg_press">#a1a1a1</color>
+    <color name="common_line">#eaeaea</color>
+    <color name="common_text">#505050</color>
+
 </resources>
