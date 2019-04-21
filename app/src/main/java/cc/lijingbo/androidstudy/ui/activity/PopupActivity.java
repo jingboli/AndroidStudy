@@ -22,6 +22,8 @@ public class PopupActivity extends AppCompatActivity {
                 if (popupView == null) {
                     popupView = (CustomPartShadowPopupView) new XPopup.Builder(PopupActivity.this)
                             .atView(v)
+                            .autoDismiss(false)
+                            .dismissOnTouchOutside(false)
                             .asCustom(new CustomPartShadowPopupView(PopupActivity.this));
                 }
                 popupView.toggle();
