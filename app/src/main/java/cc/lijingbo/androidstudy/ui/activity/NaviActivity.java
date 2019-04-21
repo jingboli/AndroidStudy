@@ -1,4 +1,4 @@
-package cc.lijingbo.androidstudy.ui;
+package cc.lijingbo.androidstudy.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;

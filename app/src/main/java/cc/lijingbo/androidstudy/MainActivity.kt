@@ -9,9 +9,10 @@ import android.view.View
 import cc.lijingbo.androidstudy.animation.AnimationMainActivity
 import cc.lijingbo.androidstudy.imageloader.ImageLoaderDispatcherActivity
 import cc.lijingbo.androidstudy.paypassword.MainActivity
-import cc.lijingbo.androidstudy.ui.NaviActivity
-import cc.lijingbo.androidstudy.ui.RvListenerActivity
-import cc.lijingbo.androidstudy.ui.WaterMarkActivity
+import cc.lijingbo.androidstudy.ui.activity.NaviActivity
+import cc.lijingbo.androidstudy.ui.activity.PopupActivity
+import cc.lijingbo.androidstudy.ui.activity.RvListenerActivity
+import cc.lijingbo.androidstudy.ui.activity.WaterMarkActivity
 import cc.lijingbo.androidstudy.webview.WebViewActivity
 
 class MainActivity : AppCompatActivity() {
@@ -125,11 +126,15 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, WaterMarkActivity::class.java))
     }
 
-    fun rvListenerMethod(view: View?){
-        startActivity(Intent(this,RvListenerActivity::class.java))
+    fun rvListenerMethod(view: View?) {
+        startActivity(Intent(this, RvListenerActivity::class.java))
     }
 
-    fun nativation(view: View?){
+    fun nativation(view: View?) {
         startActivity(Intent(this, NaviActivity::class.java))
+    }
+
+    fun popup(view: View?) {
+        startActivity(Intent(this, PopupActivity::class.java))
     }
 }

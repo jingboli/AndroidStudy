@@ -1,4 +1,4 @@
-package cc.lijingbo.androidstudy.ui;
+package cc.lijingbo.androidstudy.ui.adapter;
 
 import android.support.annotation.Nullable;
 import cc.lijingbo.androidstudy.R;

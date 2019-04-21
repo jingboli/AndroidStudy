@@ -1,4 +1,4 @@
-package cc.lijingbo.androidstudy.ui;
+package cc.lijingbo.androidstudy.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
 import cc.lijingbo.androidstudy.R;
+import cc.lijingbo.androidstudy.ui.adapter.RxListenerAdapter;
 import cc.lijingbo.androidstudy.ui.model.bean.CityBean;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
