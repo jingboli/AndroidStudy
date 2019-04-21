@@ -12,8 +12,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 import cc.lijingbo.androidstudy.R;
 import cc.lijingbo.androidstudy.ui.model.bean.CityBean;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
@@ -46,7 +44,6 @@ public class RvListenerActivity extends AppCompatActivity {
     private RxListenerAdapter mAdapter;
     private RelativeLayout headerView;
     private LinearLayoutManager layoutManager;
-    private TextView tvStickyHeaderView;
     private int mCurrentPosition = 0;
     private int fontListSize;
 
@@ -62,7 +59,7 @@ public class RvListenerActivity extends AppCompatActivity {
         refreshLayout = findViewById(R.id.refresh_layout);
         rvList = findViewById(R.id.play_card_list);
         headerView = findViewById(R.id.header_title_layout);
-        tvStickyHeaderView = findViewById(R.id.tv_sticky_header_view);
+
         headerView.setVisibility(View.GONE);
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
@@ -74,6 +71,9 @@ public class RvListenerActivity extends AppCompatActivity {
         initRecycerView();
     }
 
+    int distanceY;
+    int state;
+
     private void initRecycerView() {
         rvList.setHasFixedSize(true);
         rvList.setItemAnimator(new DefaultItemAnimator());
@@ -83,41 +83,48 @@ public class RvListenerActivity extends AppCompatActivity {
         mAdapter = new RxListenerAdapter(allList);
         rvList.setAdapter(mAdapter);
         mAdapter.setEnableLoadMore(false);
-        final boolean[] isDrag = {false};
         rvList.addOnScrollListener(new OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                isDrag[0] = RecyclerView.SCROLL_STATE_DRAGGING == newState;
+                if (!isDataAll) {
+                    return;
+                }
+                if (!recyclerView.canScrollVertically(1)) {
+                    if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                        initFooter();
+                    }
+                }
             }
 
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
+                if (!isDataAll) {
+                    return;
+                }
+                distanceY = dy;
+                Log.e(TAG, "dx:" + dx + ",distanceY:" + distanceY);
                 mCurrentPosition = layoutManager.findFirstVisibleItemPosition();
-                Log.e(TAG, "mCurrentPosition:" + mCurrentPosition);
                 if (mCurrentPosition >= fontListSize + mAdapter.getHeaderLayoutCount()) {
                     headerView.setVisibility(View.VISIBLE);
                 } else {
                     headerView.setVisibility(View.GONE);
                 }
-                int lastCompletelyVisibleItemPosition = layoutManager.findLastCompletelyVisibleItemPosition();
-                if (mAdapter.getFooterLayoutCount() > 0) {
-                    if (lastCompletelyVisibleItemPosition
-                            == allList.size() + mAdapter.getHeaderLayoutCount() + mAdapter.getFooterLayoutCount() - 1) {
-                        Toast.makeText(RvListenerActivity.this, "跳优惠页面", Toast.LENGTH_SHORT).show();
-                        Log.e(TAG, "isDrag:" + isDrag[0]);
-                        if (isDrag[0]) {
+                int lastVisibleItemPosition = layoutManager.findLastVisibleItemPosition();
+                if (!recyclerView.canScrollVertically(1)) {
+                    if (mAdapter.getFooterLayoutCount() == 0) {
+
+                    } else {
+                        if (recyclerView.getScrollState() == RecyclerView.SCROLL_STATE_DRAGGING && dy > 0) {
                             Intent intent = new Intent(RvListenerActivity.this, NaviActivity.class);
                             startActivity(intent);
                         }
                     }
                 } else {
-                    if (lastCompletelyVisibleItemPosition == allList.size() + mAdapter.getHeaderLayoutCount() - 1) {
-                        Log.e(TAG, "到底了");
-                        if (isDataAll) {
-                            initFooter();
-                        }
+                    if (dy < 0 && lastVisibleItemPosition
+                            < allList.size() + mAdapter.getHeaderLayoutCount()  - 1) {
+                        removeFooter();
                     }
                 }
             }
@@ -129,9 +136,9 @@ public class RvListenerActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         removeFooter();
+        rvList.scrollToPosition(0);
     }
 
-    private boolean isDataAll = false;
 
     private void initFooter() {
         if (mAdapter.getFooterLayoutCount() > 0) {
@@ -140,6 +147,7 @@ public class RvListenerActivity extends AppCompatActivity {
         View footer = LayoutInflater.from(RvListenerActivity.this)
                 .inflate(R.layout.item_play_card_footer, rvList, false);
         mAdapter.addFooterView(footer);
+        Log.e(TAG, "添加 footer");
     }
 
     private void removeFooter() {
@@ -152,6 +160,8 @@ public class RvListenerActivity extends AppCompatActivity {
         View locationView2 = LayoutInflater.from(this).inflate(R.layout.item_play_card_2, rvList, false);
         mAdapter.addHeaderView(locationView2);
     }
+
+    boolean isDataAll = false;
 
     private void fakeNetworkfresh() {
         isDataAll = false;
@@ -178,7 +188,7 @@ public class RvListenerActivity extends AppCompatActivity {
                         cityBean = new CityBean();
                         cityBean.setItemType(RxListenerAdapter.TYPE_HEADER_NEARBY);
                         nearByList.add(cityBean);
-                        for (int i = 0; i < 10; i++) {
+                        for (int i = 0; i < 5; i++) {
                             cityBean = new CityBean();
                             cityBean.setName("南京" + i);
                             cityBean.setItemType(RxListenerAdapter.TYPE_LEVEL_0);
