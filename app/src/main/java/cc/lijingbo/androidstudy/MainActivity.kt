@@ -9,6 +9,8 @@ import android.view.View
 import cc.lijingbo.androidstudy.animation.AnimationMainActivity
 import cc.lijingbo.androidstudy.imageloader.ImageLoaderDispatcherActivity
 import cc.lijingbo.androidstudy.paypassword.MainActivity
+import cc.lijingbo.androidstudy.ui.NaviActivity
+import cc.lijingbo.androidstudy.ui.RvListenerActivity
 import cc.lijingbo.androidstudy.ui.WaterMarkActivity
 import cc.lijingbo.androidstudy.webview.WebViewActivity
 
@@ -121,5 +123,13 @@ class MainActivity : AppCompatActivity() {
 
     fun waterMarkActivity(view: View?) {
         startActivity(Intent(this, WaterMarkActivity::class.java))
+    }
+
+    fun rvListenerMethod(view: View?){
+        startActivity(Intent(this,RvListenerActivity::class.java))
+    }
+
+    fun nativation(view: View?){
+        startActivity(Intent(this, NaviActivity::class.java))
     }
 }

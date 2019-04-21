@@ -52,10 +52,11 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.android.support:recyclerview-v7:27.1.1'
-    compile 'com.just.agentweb:agentweb:4.0.2'
+    implementation 'com.just.agentweb:agentweb:4.0.2'
     // (必选)
-    compile 'com.just.agentweb:download:4.0.2'
+    implementation 'com.just.agentweb:download:4.0.2'
     // (可选)
-    compile 'com.just.agentweb:filechooser:4.0.2'
+    implementation 'com.just.agentweb:filechooser:4.0.2'
     // (可选)
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
 }

@@ -12,6 +12,8 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
+    <activity android:name=".ui.NaviActivity"></activity>
+    <activity android:name=".ui.RvListenerActivity" />
     <activity android:name=".bigimage.ImageLoaderMainActivity" />
     <activity android:name=".bigimage.ImageLoaderSecondActivity" />
     <activity
@@ -37,7 +39,7 @@
     <activity
       android:name=".AlphaActivity"
       android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
-    <activity android:name=".ui.WaterMarkActivity"></activity>
+    <activity android:name=".ui.WaterMarkActivity" />
   </application>
 
 </manifest>

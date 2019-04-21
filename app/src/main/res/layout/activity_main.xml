@@ -52,4 +52,17 @@
     android:text="水印activity"
     android:onClick="waterMarkActivity" />
 
+  <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="recyclerview 滑动到底监听和吸顶效果"
+    android:onClick="rvListenerMethod" />
+
+  <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="跳转到导航"
+    android:onClick="nativation" />
+
+
 </LinearLayout>
